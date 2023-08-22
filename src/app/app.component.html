@@ -1,0 +1,25 @@
+<h1 style="color: blue;">Parent Component</h1>
+{{count}}
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button><br>
+<h3><i>value from child to parent</i></h3>
+<br><input value="sum1" [(ngModel)]="sum1"/><br><br>
+<button (click)="getservice()">GetService</button><br><br>
+<button (click)="getservicebyId()">GetServiceById</button><br><br>
+
+<!-- <p><b>Displaying pipe</b></p>
+<b>Currency pipe Rupee:</b>{{Money|currency:"INR"}}<br>
+<b>Currency pipe Dollar:</b>{{Money|currency:"USD"}}<br>
+<b>Date Pipe:</b>{{currdate | date|lowercase}}<br>
+<b>fulldate: </b>{{currdate|date:"fullDate"}}<br>
+<b>Meduim date:</b>{{currdate|date:'medium'}}<br>
+<b>Short time:</b>{{currdate|date:'shortTime'}}<br>
+<b>minutes and seconds:</b>{{currdate|date:"mm:ss"}}<br>
+<b>Date in short Form:   </b>{{currdate|date:'shortDate'}}<br>
+ case:{{title|uppercase}}<br> -->
+ <b>custom pipe</b><br>
+ {{Money|usdinr:20|currency:"INR"}}
+ <router-outlet></router-outlet><br>
+<!-- <a [routerLink]="['/auth']" [queryParams]="{id:5}">child</a> -->
+ <app-child [count]="count" (valtoParent)="getData($event)">child</app-child>
+<!-- <a [routerLink]="['/auth',8]">child</a> -->

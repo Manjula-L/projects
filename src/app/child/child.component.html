@@ -1,0 +1,14 @@
+<h1 style="color: brown;">child Component</h1>
+<p>child works!</p>
+<div *ngIf="flag">
+    <app-app-notfound></app-app-notfound>
+    </div>
+<b>custom pipe</b><br>
+ {{Rupee|usdinr:20|currency:"INR"}}
+<br><button (click)="add()">GetValueFromParent</button><br>
+<br><input value="num" [(ngModel)]="num"/><br>
+<br><button (click)="sum()">SendValueToParent</button>
+<input value="message"/><button (click)="onDelete();">Delete</button><br>
+<!-- <a [routerLink]="['**']">parent</a> -->
+
+
